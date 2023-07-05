@@ -153,10 +153,10 @@ p {
 }
 
     body {
-        background-image: url(assets/fondo1.png);
-        background-position: center 0px;
-        background-size: cover;
-        background-repeat: repeat;
+        background: rgb(255, 97, 49);
+background: linear-gradient(0deg, rgba(255, 97, 49, 1) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 60%, rgba(255, 97, 49, 1) 100%);
+background-repeat: no-repeat;
+background-attachment: fixed;
     }
     .social {
         width: auto;
