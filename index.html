@@ -4,31 +4,18 @@
     <title>Criperto</title>
     <meta charset="utf-8"/ name="viewport" content="width=device-width, user-sxalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="assets/icono.png">
+    <link rel="icon" type="image/png" href="https://yt3.googleusercontent.com/oMXg0mIGLrkx_jckyGXDpVgyuL5I-k5xVsnl2Vlc5VisWM_UnC5kuvxQfNJHVOc6leSANtR_BA=s176-c-k-c0x00ffffff-no-rj">
     </head>
     <body>
-        <!-- logo -->
-        <div class="criperto-div">
-        <img class="criperto" src="assets/Criperto.png">
-        </div>
-        <!-- Paginas/projectos -->
-        <div class="web-pages">
-            <h1>Mis páginas web:</h1>
-        <a class="pages" href="https://criperto.github.io/MinecraftJSONgeneratorCriperto/" target="_blank">
-    <i class="fa-solid fa-globe"></i> Minecraft text JSON generator
-  </a>
-            <a class="pages" href="https://criperto.github.io/MinecraftTimeCalculator/" target="_blank">
-    <i class="fa-solid fa-globe"></i> Minecraft time calculator
-  </a>
-            <a class="pages" href="https://criperto.github.io/download_time_calculator/" target="_blank">
-    <i class="fa-solid fa-globe"></i> Download Time Calculator
-  </a>
-            
-        </div>
-        
-        
-<!-- Redes Sociales -->
-        <div class="social-media">
+        <!-- HTML -->
+        <main class="main-container">
+  <!-- izquierda -->
+  <div class="izquierda">
+      <div class="marca" id="marca">
+       <img src="https://yt3.googleusercontent.com/oMXg0mIGLrkx_jckyGXDpVgyuL5I-k5xVsnl2Vlc5VisWM_UnC5kuvxQfNJHVOc6leSANtR_BA=s176-c-k-c0x00ffffff-no-rj" id="logo">
+      <img src="assets/Criperto.png" id="Criperto">
+      </div>
+      <div class="social-media">
             <h1>Mis redes sociales:</h1>
         <a class="youtube-button social" href="https://www.youtube.com/@Criperto_Oficial" target="_blank">
     <i class="fab fa-youtube"></i> Youtube
@@ -49,19 +36,60 @@
     <i class="fab fa-github"></i> GitHub
   </a>
         </div>
-        <br/>
-        <h1>Estadísticas de mi servidor de Discord:</h1>
-        <div class="discord">
-            
-        <iframe src="https://discord.com/widget?id=804784925231808513&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        </div>
-        <h2>Criperto</h2>
-        <p>Gracias por visitar mi página.</p>
+      <div class="discord-widget">
+          <h1>Mi servidor de discord:</h1>
+      <iframe src="https://discord.com/widget?id=804784925231808513&theme=dark" width="99%" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </div>
+      <br/>
+      <p>Esta pagina fue creada por Criperto.</p>
+  </div>
+
+  <!-- principal -->
+  <div class="principal">
+       <h1>Mis paginas:</h1>
+      
+      <div class="paginas">
+         <h1>Generador de texto JSON</h1>
+          <img src="assets/capturadepantalla/textoJSONscreen.png">
+          <a class="pages" href="https://criperto.github.io/MinecraftJSONgeneratorCriperto/" target="_blank"> Visitar <i class="fa-solid fa-arrow-right" id="arrow"></i>
+  </a>
+      </div>
+      
+      <div class="paginas">
+         <h1>Calculadora de tiempo de minecraft</h1>
+          <img src="assets/capturadepantalla/timecalculatorscreen.png">
+          <a class="pages" href="https://criperto.github.io/MinecraftTimeCalculator/" target="_blank"> Visitar <i class="fa-solid fa-arrow-right" id="arrow"></i>
+  </a>
+      </div>
+      
+      <div class="paginas">
+         <h1>Calculadora de tiempo de descarga</h1>
+          <img src="assets/capturadepantalla/timedownloadcalculatorscreen.png">
+          <a class="pages" href="https://criperto.github.io/download_time_calculator/" target="_blank"> Visitar <i class="fa-solid fa-arrow-right" id="arrow"></i>
+  </a>
+      </div>
+      
+  </div>
+</main>
+
+        
         <!-- codigo -->
         <script>
-    
-        
-        
+    var miDiv = document.getElementById("marca");
+
+function aplicarCambio() {
+  if (miDiv.offsetWidth > 440) {
+    miDiv.classList.add("marca-big");
+  } else {
+    miDiv.classList.remove("marca-big");
+  }
+}
+
+// Llamar a la función cuando se cargue la página y en caso de que haya cambios en el tamaño de la ventana
+window.addEventListener("load", aplicarCambio);
+window.addEventListener("resize", aplicarCambio);
+
+            
         
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>

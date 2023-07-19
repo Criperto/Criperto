@@ -62,28 +62,78 @@
       }
 
 .pages {
-      display: inline-block;
+      display: block;
       padding: 10px;
-      background-color: #ff6131;
+      background-color: rgba(255,97,49,1);
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
+      width: 20%;
+    text-align: center;
+    font-family: '1';
       }
-.web-pages {
+
+.pages:hover #arrow {
+  animation: beat 1s infinite;
+}
+
+.pages:hover {
+    background-color: rgba(255,97,49,0.5);
+}
+
+.pages:active #arrow {
+    animation: bounce 0.3s;
+}
+
+.pages:active {
+    color: black;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+       .social-media {
     text-align: center;
     font-family: '3';
 }
 
-.criperto-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-media {
-    text-align: center;
-    font-family: '3';
-}
+.social:hover {
+        background-color: rgba(255,97,49,0.7);
+    }
+    
+    .social:active {
+        background-color: rgba(255,97,49,1);
+        transition-duration: 0.1s;
+        color: black;
+    }
 
 @font-face {
     font-family: '1';
@@ -108,7 +158,6 @@ h1 {
      2px -2px 0 #000,
     -2px 2px 0 #000,
      2px 2px 0 #000;
-    text-align: center;
 }
 
 h2 {
@@ -119,7 +168,6 @@ h2 {
      1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
-    text-align: center;
 }
 
 h3 {
@@ -130,7 +178,6 @@ h3 {
      1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
-    text-align: center;
 }
 
 p {
@@ -141,57 +188,205 @@ p {
      1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
-    text-align: center;
 }
 
 
 /* PC desing*/
 @media screen and (min-width: 767px) {
-.criperto {
-    width: 25%;
-    height: 25%;
+
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 97, 49);
+    background: linear-gradient(0deg, rgba(255, 97, 49, 1) 0%, rgba(255,196,171,1) 40%, rgba(255,196,171,1) 60%, rgba(255, 97, 49, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
-
-    body {
-        background: rgb(255, 97, 49);
-background: linear-gradient(0deg, rgba(255, 97, 49, 1) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 60%, rgba(255, 97, 49, 1) 100%);
-background-repeat: no-repeat;
-background-attachment: fixed;
-    }
-    .social {
-        width: auto;
-        height: auto;
-        margin: auto;
-    }
+    .izquierda {
+  background-color: rgba(3,3,3,.5);  
+  backdrop-filter: blur(10px);
+  padding: 5px;
+  width: 25%;
+  height: auto;
+  float: left;
+  overflow-y: auto;
+  
 }
-
-/* Movile desing*/
-
-@media screen and (max-width: 767px) {
-.criperto {
-    width: 60%;
-    height: 60%;
-}
-
-    body {
-        background-image: url(assets/fondo2.jpg);
-        background-position: center;
-        background-size: cover;
+    .marca {
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        display: inherit;
+        padding-bottom: 20px;
     }
+    
+    
+    #logo {
+        border-radius: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        
+    }
+    
+    #Criperto {
+        width: 50%;
+        min-width: 200px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        
+    }
+    .marca-big #Criperto {
+        padding-bottom: 70px;
+    }
+    
 
+.principal {
+  margin-left: 25%;
+  padding: 10px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    overflow-y: auto;
+  
+}
+    
 .social {
     display: block;
     margin: auto;
     margin-bottom: 10px;
     width: 50%;
+    transition-duration: 0.5s;
     }
     
-.pages {
+    
+    .social-media {
+        padding-bottom: 10px;
+    }
+    
+    .discord-widget {
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        font-family: '1';
+    }
+    
+    .paginas {
+        background-color: rgba(3,3,3,.5);  
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        margin: 5px;
+        text-align: left;
+        border-radius: 10px;
+    }
+    
+    .paginas img {
+        width: 50%;
+        padding: 10px;
+    }
+    .paginas h1,h2,h3,p {
+        padding: 5px;
+    }
+
+}
+
+/* Movile desing*/
+
+@media screen and (max-width: 767px) {
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    background: rgb(255,97,49);
+    background: linear-gradient(90deg, rgba(255,97,49,1) 0%, rgba(255,196,171,1) 40%, rgba(255,196,171,1) 60%, rgba(255,97,49,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    }
+    
+    .izquierda {
+  background-color: rgba(3,3,3,.5);  
+  backdrop-filter: blur(10px);
+  padding: 1px;
+        margin: 5px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        border-radius: 10px;
+  
+}
+    
+    #logo {
+        border-radius: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        
+    }
+    
+    #Criperto {
+        width: 50%;
+        min-width: 200px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        
+    }
+    
+    .paginas {
+        background-color: rgba(3,3,3,.5);  
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        margin: 5px;
+        text-align: left;
+        border-radius: 10px;
+    }
+    
+    .paginas img {
+        width: 50%;
+        min-width: 300px;
+        padding: 10px;
+    }
+    .paginas h1,h2,h3,p {
+        padding: 5px;
+    }
+    
+    .social {
     display: block;
     margin: auto;
     margin-bottom: 10px;
     width: 50%;
+    transition-duration: 0.5s;
     }
-
+    
+    
+    .social-media {
+        padding-bottom: 10px;
+    }
+    
+    .discord-widget {
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        font-family: '1';
+    }
+    
+    .principal {
+  padding: 10px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  
+}
 
 }
